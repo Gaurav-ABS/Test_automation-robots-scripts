@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.13 on win32)" generated="20221223 12:42:00.361" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo" source="C:\development\robots-scripts\KeywordDemo\demo.robot">
+<test id="s1-t1" name="Test case 1" line="7">
+<kw name="User Defined Keyword a">
+<kw name="Log" library="BuiltIn">
+<arg>this is user defined function a</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 12:42:00.410" level="INFO">this is user defined function a</msg>
+<status status="PASS" starttime="20221223 12:42:00.410" endtime="20221223 12:42:00.410"/>
+</kw>
+<status status="PASS" starttime="20221223 12:42:00.410" endtime="20221223 12:42:00.411"/>
+</kw>
+<kw name="User Defined Keyword b">
+<kw name="Log" library="BuiltIn">
+<arg>this is user defined function b</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 12:42:00.411" level="INFO">this is user defined function b</msg>
+<status status="PASS" starttime="20221223 12:42:00.411" endtime="20221223 12:42:00.411"/>
+</kw>
+<status status="PASS" starttime="20221223 12:42:00.411" endtime="20221223 12:42:00.412"/>
+</kw>
+<status status="PASS" starttime="20221223 12:42:00.409" endtime="20221223 12:42:00.412"/>
+</test>
+<test id="s1-t2" name="Test case 2" line="15">
+<kw name="User Defined Keyword a">
+<kw name="Log" library="BuiltIn">
+<arg>this is user defined function a</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 12:42:00.415" level="INFO">this is user defined function a</msg>
+<status status="PASS" starttime="20221223 12:42:00.415" endtime="20221223 12:42:00.415"/>
+</kw>
+<status status="PASS" starttime="20221223 12:42:00.414" endtime="20221223 12:42:00.415"/>
+</kw>
+<kw name="User Defined Keyword b">
+<kw name="Log" library="BuiltIn">
+<arg>this is user defined function b</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 12:42:00.416" level="INFO">this is user defined function b</msg>
+<status status="PASS" starttime="20221223 12:42:00.416" endtime="20221223 12:42:00.416"/>
+</kw>
+<status status="PASS" starttime="20221223 12:42:00.416" endtime="20221223 12:42:00.416"/>
+</kw>
+<status status="PASS" starttime="20221223 12:42:00.414" endtime="20221223 12:42:00.417"/>
+</test>
+<status status="PASS" starttime="20221223 12:42:00.364" endtime="20221223 12:42:00.418"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

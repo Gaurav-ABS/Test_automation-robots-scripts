@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.13 on win32)" generated="20221223 21:03:39.119" rpa="false" schemaversion="3">
+<suite id="s1" name="Passing Variables To Keywords" source="C:\development\robots-scripts\VariablesDemo\passing_variables_to_keywords.robot">
+<test id="s1-t1" name="Test Case 1" line="8">
+<kw name="Demonstrates the variable passing to keyword">
+<kw name="Log" library="BuiltIn">
+<arg>${MY_GLOBAL_VARIABLE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 21:03:39.142" level="INFO">secret message</msg>
+<status status="PASS" starttime="20221223 21:03:39.142" endtime="20221223 21:03:39.142"/>
+</kw>
+<status status="PASS" starttime="20221223 21:03:39.142" endtime="20221223 21:03:39.142"/>
+</kw>
+<status status="PASS" starttime="20221223 21:03:39.141" endtime="20221223 21:03:39.143"/>
+</test>
+<test id="s1-t2" name="Test Case 2" line="11">
+<kw name="Demonstrates inputing variable value from test case into keyword">
+<arg>Secret Message 2</arg>
+<kw name="Log" library="BuiltIn">
+<arg>${my_variable_value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221223 21:03:39.144" level="INFO">Secret Message 2</msg>
+<status status="PASS" starttime="20221223 21:03:39.144" endtime="20221223 21:03:39.144"/>
+</kw>
+<status status="PASS" starttime="20221223 21:03:39.144" endtime="20221223 21:03:39.144"/>
+</kw>
+<status status="PASS" starttime="20221223 21:03:39.144" endtime="20221223 21:03:39.145"/>
+</test>
+<status status="PASS" starttime="20221223 21:03:39.120" endtime="20221223 21:03:39.146"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Passing Variables To Keywords">Passing Variables To Keywords</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

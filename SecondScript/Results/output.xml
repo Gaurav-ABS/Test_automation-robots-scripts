@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.13 on win32)" generated="20221224 21:38:28.876" rpa="false" schemaversion="3">
+<suite id="s1" name="Crm" source="C:\development\robots-scripts\SecondScript\Tests\Crm.robot">
+<test id="s1-t1" name="Should be able to add new customer" line="22">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<arg>${BROWSER}</arg>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221224 21:38:29.384" endtime="20221224 21:38:29.384"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221224 21:38:29.385" endtime="20221224 21:38:29.385"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221224 21:38:29.386" level="INFO">Opening browser 'edge' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20221224 21:38:29.385" endtime="20221224 21:38:31.120"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:29.383" endtime="20221224 21:38:31.121"/>
+</kw>
+<kw name="Go to &quot;Home&quot; Page" library="CrmApp">
+<kw name="Navigate To" library="Home">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221224 21:38:31.125" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<status status="PASS" starttime="20221224 21:38:31.125" endtime="20221224 21:38:31.943"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221224 21:38:31.943" endtime="20221224 21:38:32.305"/>
+</kw>
+<kw name="Verify Home Page Loaded" library="Home">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_PAGE_LOADED_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221224 21:38:32.306" endtime="20221224 21:38:32.544"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:32.306" endtime="20221224 21:38:32.544"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:31.124" endtime="20221224 21:38:32.544"/>
+</kw>
+<kw name="Verify Home Page Loaded" library="Home">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${HOME_PAGE_LOADED_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221224 21:38:32.545" endtime="20221224 21:38:32.763"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:32.545" endtime="20221224 21:38:32.763"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:31.124" endtime="20221224 21:38:32.763"/>
+</kw>
+<kw name="Login With Valid Credentials" library="CrmApp">
+<arg>${VALID_LOGIN_EMAIL}</arg>
+<arg>${VALID_LOGIN_PASSWORD}</arg>
+<kw name="Click &quot;Sign In&quot; Link" library="TopNav">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${TOP_NAV_SIGNIN_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:32.767" level="INFO">Clicking link 'id=SignIn'.</msg>
+<status status="PASS" starttime="20221224 21:38:32.766" endtime="20221224 21:38:33.824"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:32.765" endtime="20221224 21:38:33.824"/>
+</kw>
+<kw name="Verify Login Page Loaded" library="SignIn">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${LOGIN_PAGE_LOADED_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221224 21:38:33.825" endtime="20221224 21:38:34.061"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:33.825" endtime="20221224 21:38:34.061"/>
+</kw>
+<kw name="Login With Valid Credentials" library="SignIn">
+<arg>${Email}</arg>
+<arg>${Password}</arg>
+<kw name="Fill &quot;Email&quot; Field" library="SignIn">
+<arg>${Email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SIGNIN_EMAIL_TEXTBOX}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:34.064" level="INFO">Typing text 'admin@robotframeowkrtutorial.com' into text field 'id=email-id'.</msg>
+<status status="PASS" starttime="20221224 21:38:34.064" endtime="20221224 21:38:34.911"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:34.062" endtime="20221224 21:38:34.911"/>
+</kw>
+<kw name="Fill &quot;Password&quot; Field" library="SignIn">
+<arg>${Password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SIGNIN_PASSWORD_TEXTBOX}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:34.914" level="INFO">Typing text 'anypassword' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20221224 21:38:34.913" endtime="20221224 21:38:35.735"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:34.912" endtime="20221224 21:38:35.735"/>
+</kw>
+<kw name="Click &quot;Submit&quot; Button" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SIGNIN_SUBMIT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:35.737" level="INFO">Clicking button 'id=submit-id'.</msg>
+<status status="PASS" starttime="20221224 21:38:35.736" endtime="20221224 21:38:37.548"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:35.736" endtime="20221224 21:38:37.548"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:34.061" endtime="20221224 21:38:37.548"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:32.764" endtime="20221224 21:38:37.549"/>
+</kw>
+<kw name="Add New Customer" library="CrmApp">
+<kw name="Verify Customers Page Loaded" library="Customers">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${CUSTOMERS_PAGE_LOADED_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221224 21:38:37.551" endtime="20221224 21:38:37.784"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:37.550" endtime="20221224 21:38:37.784"/>
+</kw>
+<kw name="Click Add Customer Link" library="Customers">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ADD_CUSTOMER_LINK}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221224 21:38:37.786" endtime="20221224 21:38:38.508"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ADD_CUSTOMER_LINK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221224 21:38:38.508" endtime="20221224 21:38:38.969"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${ADD_CUSTOMER_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:38.970" level="INFO">Clicking link 'id=new-customer'.</msg>
+<status status="PASS" starttime="20221224 21:38:38.969" endtime="20221224 21:38:40.090"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:37.785" endtime="20221224 21:38:40.090"/>
+</kw>
+<kw name="Verify AddCustomer Page Loaded" library="AddCustomer">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${ADD_CUSTOMER_PAGE_LOADED_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221224 21:38:40.091" endtime="20221224 21:38:40.326"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:40.091" endtime="20221224 21:38:40.326"/>
+</kw>
+<kw name="Fill Customer Fields" library="AddCustomer">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=EmailAddress</arg>
+<arg>gauravabs@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:40.328" level="INFO">Typing text 'gauravabs@gmail.com' into text field 'id=EmailAddress'.</msg>
+<status status="PASS" starttime="20221224 21:38:40.327" endtime="20221224 21:38:41.161"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=FirstName</arg>
+<arg>Gaurav</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:41.163" level="INFO">Typing text 'Gaurav' into text field 'id=FirstName'.</msg>
+<status status="PASS" starttime="20221224 21:38:41.162" endtime="20221224 21:38:41.996"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=LastName</arg>
+<arg>ABS</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:41.998" level="INFO">Typing text 'ABS' into text field 'id=LastName'.</msg>
+<status status="PASS" starttime="20221224 21:38:41.997" endtime="20221224 21:38:42.827"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=City</arg>
+<arg>Barcelona</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:42.828" level="INFO">Typing text 'Barcelona' into text field 'id=City'.</msg>
+<status status="PASS" starttime="20221224 21:38:42.827" endtime="20221224 21:38:43.682"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>id=StateOrRegion</arg>
+<arg>TX</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20221224 21:38:43.683" level="INFO">Selecting options from selection list 'id=StateOrRegion' by value TX.</msg>
+<status status="PASS" starttime="20221224 21:38:43.682" endtime="20221224 21:38:45.498"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>gender</arg>
+<arg>female</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20221224 21:38:45.499" level="INFO">Selecting 'female' from radio button 'gender'.</msg>
+<status status="PASS" starttime="20221224 21:38:45.498" endtime="20221224 21:38:46.249"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name=promos-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221224 21:38:46.249" endtime="20221224 21:38:46.721"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>name=promos-name</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:46.723" level="INFO">Selecting checkbox 'name=promos-name'.</msg>
+<status status="PASS" starttime="20221224 21:38:46.721" endtime="20221224 21:38:47.915"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:40.327" endtime="20221224 21:38:47.915"/>
+</kw>
+<kw name="Click Submit Button" library="AddCustomer">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221224 21:38:47.917" endtime="20221224 21:38:48.370"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221224 21:38:48.372" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<msg timestamp="20221224 21:38:50.719" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221224 21:38:50.720" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (541, 593)
+  (Session info: MicrosoftEdge=108.0.1462.54)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF7273391D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272C0992+842866]
+	(No symbol) [0x00007FF726F71D90]
+	(No symbol) [0x00007FF726FBE4BD]
+	(No symbol) [0x00007FF726FBB965]
+	(No symbol) [0x00007FF726FB8BF9]
+	(No symbol) [0x00007FF726FB7298]
+	(No symbol) [0x00007FF726FA8C18]
+	(No symbol) [0x00007FF726FD5D2A]
+	(No symbol) [0x00007FF726FA836E]
+	(No symbol) [0x00007FF726FA8241]
+	(No symbol) [0x00007FF726FD6080]
+	(No symbol) [0x00007FF726FA836E]
+	(No symbol) [0x00007FF726FEF70C]
+	(No symbol) [0x00007FF726FD5B03]
+	(No symbol) [0x00007FF726FA73B8]
+	(No symbol) [0x00007FF726FA638E]
+	(No symbol) [0x00007FF726FA7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF72720FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7271FD4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272006EC+55756]
+	(No symbol) [0x00007FF727077923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272C844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272CD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272CD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272D67BE+932510]
+	BaseThreadInitThunk [0x00007FFB92587614+20]
+	RtlUserThreadStart [0x00007FFB935026A1+33]
+</msg>
+<status status="FAIL" starttime="20221224 21:38:48.371" endtime="20221224 21:38:50.726"/>
+</kw>
+<status status="FAIL" starttime="20221224 21:38:47.916" endtime="20221224 21:38:50.727"/>
+</kw>
+<kw name="Verify Customer Added Succesfully" library="AddCustomer">
+<status status="NOT RUN" starttime="20221224 21:38:50.727" endtime="20221224 21:38:50.728"/>
+</kw>
+<status status="FAIL" starttime="20221224 21:38:37.550" endtime="20221224 21:38:50.728"/>
+</kw>
+<kw name="Log Out" library="CrmApp">
+<status status="NOT RUN" starttime="20221224 21:38:50.729" endtime="20221224 21:38:50.729"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221224 21:38:50.731" endtime="20221224 21:38:53.117"/>
+</kw>
+<status status="PASS" starttime="20221224 21:38:50.730" endtime="20221224 21:38:53.117"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>1006</tag>
+<tag>Contacts</tag>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20221224 21:38:29.381" endtime="20221224 21:38:53.118">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (541, 593)
+  (Session info: MicrosoftEdge=108.0.1462.54)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF7273391D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272C0992+842866]
+	(No symbol) [0x00007FF726F71D90]
+	(No symbol) [0x00007FF726FBE4BD]
+	(No symbol) [0x00007FF726FBB965]
+	(No symbol) [0x00007FF726FB8BF9]
+	(No symbol) [0x00007FF726FB7298]
+	(No symbol) [0x00007FF726FA8C18]
+	(No symbol) [0x00007FF726FD5D2A]
+	(No symbol) [0x00007FF726FA836E]
+	(No symbol) [0x00007FF726FA8241]
+	(No symbol) [0x00007FF726FD6080]
+	(No symbol) [0x00007FF726FA836E]
+    [ Message content over the limit has been removed. ]
+	(No symbol) [0x00007FF726FA73B8]
+	(No symbol) [0x00007FF726FA638E]
+	(No symbol) [0x00007FF726FA7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF72720FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7271FD4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272006EC+55756]
+	(No symbol) [0x00007FF727077923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272C844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272CD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272CD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF7272D67BE+932510]
+	BaseThreadInitThunk [0x00007FFB92587614+20]
+	RtlUserThreadStart [0x00007FFB935026A1+33]</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" starttime="20221224 21:38:28.879" endtime="20221224 21:38:53.124"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">1006</stat>
+<stat pass="0" fail="1" skip="0">Contacts</stat>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Crm">Crm</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221224 21:38:29.328" level="ERROR">Error in file 'C:\development\robots-scripts\SecondScript\Resources\PO\Customers.robot' on line 2: Importing library 'Selenium' failed: ModuleNotFoundError: No module named 'Selenium'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\gaura\AppData\Roaming\Python\Python39\Scripts\robot.exe
+  C:\ProgramData\Anaconda3\python39.zip
+  C:\ProgramData\Anaconda3\DLLs
+  C:\ProgramData\Anaconda3\lib
+  C:\ProgramData\Anaconda3
+  C:\Users\gaura\AppData\Roaming\Python\Python39\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages\win32
+  C:\ProgramData\Anaconda3\lib\site-packages\win32\lib
+  C:\ProgramData\Anaconda3\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221224 21:38:29.340" level="ERROR">Error in file 'C:\development\robots-scripts\SecondScript\Resources\PO\AddCustomer.robot' on line 2: Importing library 'Selenium' failed: ModuleNotFoundError: No module named 'Selenium'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\gaura\AppData\Roaming\Python\Python39\Scripts\robot.exe
+  C:\ProgramData\Anaconda3\python39.zip
+  C:\ProgramData\Anaconda3\DLLs
+  C:\ProgramData\Anaconda3\lib
+  C:\ProgramData\Anaconda3
+  C:\Users\gaura\AppData\Roaming\Python\Python39\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages\win32
+  C:\ProgramData\Anaconda3\lib\site-packages\win32\lib
+  C:\ProgramData\Anaconda3\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221224 21:38:29.352" level="ERROR">Error in file 'C:\development\robots-scripts\SecondScript\Resources\PO\LoggedOut.robot' on line 2: Importing library 'Selenium' failed: ModuleNotFoundError: No module named 'Selenium'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\gaura\AppData\Roaming\Python\Python39\Scripts\robot.exe
+  C:\ProgramData\Anaconda3\python39.zip
+  C:\ProgramData\Anaconda3\DLLs
+  C:\ProgramData\Anaconda3\lib
+  C:\ProgramData\Anaconda3
+  C:\Users\gaura\AppData\Roaming\Python\Python39\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages\win32
+  C:\ProgramData\Anaconda3\lib\site-packages\win32\lib
+  C:\ProgramData\Anaconda3\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221224 21:38:29.364" level="ERROR">Error in file 'C:\development\robots-scripts\SecondScript\Resources\PO\SignIn.robot' on line 2: Importing library 'Selenium' failed: ModuleNotFoundError: No module named 'Selenium'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\gaura\AppData\Roaming\Python\Python39\Scripts\robot.exe
+  C:\ProgramData\Anaconda3\python39.zip
+  C:\ProgramData\Anaconda3\DLLs
+  C:\ProgramData\Anaconda3\lib
+  C:\ProgramData\Anaconda3
+  C:\Users\gaura\AppData\Roaming\Python\Python39\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages\win32
+  C:\ProgramData\Anaconda3\lib\site-packages\win32\lib
+  C:\ProgramData\Anaconda3\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221224 21:38:29.374" level="ERROR">Error in file 'C:\development\robots-scripts\SecondScript\Resources\PO\TopNav.robot' on line 2: Importing library 'Selenium' failed: ModuleNotFoundError: No module named 'Selenium'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\gaura\AppData\Roaming\Python\Python39\Scripts\robot.exe
+  C:\ProgramData\Anaconda3\python39.zip
+  C:\ProgramData\Anaconda3\DLLs
+  C:\ProgramData\Anaconda3\lib
+  C:\ProgramData\Anaconda3
+  C:\Users\gaura\AppData\Roaming\Python\Python39\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages
+  C:\ProgramData\Anaconda3\lib\site-packages\win32
+  C:\ProgramData\Anaconda3\lib\site-packages\win32\lib
+  C:\ProgramData\Anaconda3\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>
